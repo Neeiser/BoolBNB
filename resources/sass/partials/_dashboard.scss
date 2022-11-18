@@ -1,0 +1,31 @@
+.dashboard-username {
+   color: $primary;
+}
+
+.dashboard-list {
+   .crown {
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      color: $gold;
+      top: 1rem;
+      right: 1rem;
+      background: url('img/promo_crown.svg') center;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+   }
+
+   .img-box {
+      width: 15rem;
+      height: 10rem;
+      img {
+         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+         object-fit: cover;
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   article {
+      background-color: $bg1;
+   }
+}

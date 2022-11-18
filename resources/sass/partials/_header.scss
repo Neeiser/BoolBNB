@@ -1,0 +1,94 @@
+header {
+   background-color: $bg1;
+   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+
+   .navbar {
+      min-height: 5rem;
+   }
+
+   .logo {
+      height: 1.5rem;
+   }
+
+   .navbar-expand-md .navbar-nav .nav-link {
+      padding: 1.5rem 0;
+   }
+
+   #navbarDropdown {
+      text-transform: uppercase;
+   }
+
+   #dropdownAuth {
+      position: absolute;
+      inset: 0px 0px auto auto;
+      margin: 0px;
+      transform: translate(0px, 40px);
+   }
+
+   @include media-breakpoint-down(md) {
+      .nav-item {
+         width: 100%;
+         margin: 0;
+         margin-left: 1rem;
+      }
+
+      .navbar-expand-md .navbar-nav .nav-link {
+         padding: 1rem 0;
+      }
+
+      #dropdownAuth {
+         left: 0;
+         right: auto;
+      }
+   }
+
+   @include media-breakpoint-up(md) {
+      .nav-item:not(:last-child) {
+         margin: 0 0 0 1.9rem;
+         align-self: stretch;
+
+         &::before {
+            content: '';
+            display: block;
+            width: 0;
+            margin: 0 auto;
+            height: 0.25rem;
+            background-color: transparent;
+            transition: width 0.3s, background 0.3s;
+         }
+         &:hover {
+            &::before {
+               content: '';
+               width: 100%;
+               height: 0.25rem;
+               background-color: $primary;
+            }
+         }
+      }
+
+      .nav-item:last-child {
+         margin: 0 0 0 1.9rem;
+         align-self: center;
+      }
+   }
+
+   .navbar-light .navbar-nav .nav-link {
+      color: $body-color;
+   }
+
+   .navbar-light .navbar-nav .nav-link:hover,
+   .navbar-light .navbar-nav .nav-link:focus {
+      color: $primary;
+   }
+
+   .dropdown-item:hover,
+   .dropdown-item:focus {
+      background-color: $primary;
+      color: $white;
+   }   
+}
+
+.mandatory{
+   color: #e11818;
+   font-weight: 600;
+}
